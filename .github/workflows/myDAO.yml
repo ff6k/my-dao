@@ -1,0 +1,57 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: MyDAO CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js 16.14.0
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.14.0'
+        cache: 'npm'
+        
+    - name: Show Node.js version    
+      run: npm --version
+    
+    - name: Install Truffle (globaly)
+      #run: npm install truffle@5.4.24 -g
+      run: npm install -g truffle
+
+    - name: Install Solhint (globaly)
+      run: npm install -g solhint
+
+    - name: Install ganache-cli (globaly)
+      run: npm install -g ganache-cli
+
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Show versions (truffle)
+      run: truffle version
+      
+    - name: Show versions (solhint)
+      run: npx solhint --version
+      
+    - name: Run Truffle Test with CI=true for Codechecks  
+      #run: CI=true truffle test
+      # WORKAROUND: "--reporter eth-gas-reporter" There is a issue with truffle >5.2.24 and eth-gas-report, with this parameter its works ok.
+      # NOTE: The CI=true flag is required for the creation of the gasReporterOutput.json file to be consumed by eth-gas-reporter/codechecks.
+      run: CI=true truffle test --reporter eth-gas-reporter   
+
+    - name: Run Test Coverage
+      run: truffle run coverage
+      
+    - name: Run and Check Solhint
+      run: npx solhint 'contracts/**/*.sol' -f stylish

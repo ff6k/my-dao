@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+contracts/artifacts
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+coverage.json
+
+# nyc test coverage
+.nyc_output
+yarn.lockcoverage
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+.env.test
+client/.env.local
+
+# Build directories
+build/
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Ignore vscode
+.vscode/
+
+# Ignore codechecks files
+gasReporterOutput.json
