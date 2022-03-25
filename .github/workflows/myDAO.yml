@@ -32,9 +32,6 @@ jobs:
     - name: Install Solhint (globaly)
       run: npm install -g solhint
 
-    - name: Install ganache-cli (globaly)
-      run: npm install -g ganache-cli
-
     - name: Install dependencies
       run: npm install
     
@@ -43,9 +40,6 @@ jobs:
       
     - name: Show versions (solhint)
       run: npx solhint --version
-      
-    - name: Run ganache-cli
-      run: ganache-cli
 
     - name: Run Truffle Test with CI=true for Codechecks  
       #run: CI=true truffle test

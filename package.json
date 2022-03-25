@@ -8,7 +8,7 @@
     },
     "scripts": {
         "coverage": "truffle run coverage",
-        "test": "truffle test --network development --reporter eth-gas-reporter"
+        "test": "truffle test --reporter eth-gas-reporter"
     },
     "keywords": [
         "ERC-20",
