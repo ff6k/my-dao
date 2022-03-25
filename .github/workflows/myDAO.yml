@@ -49,6 +49,11 @@ jobs:
 
     - name: Run Test Coverage
       run: truffle run coverage
-      
+    
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Run and Check Solhint
       run: npx solhint 'contracts/**/*.sol' -f stylish
