@@ -44,6 +44,9 @@ jobs:
     - name: Show versions (solhint)
       run: npx solhint --version
       
+    - name: Run ganache-cli
+      run: ganache-cli
+
     - name: Run Truffle Test with CI=true for Codechecks  
       #run: CI=true truffle test
       # WORKAROUND: "--reporter eth-gas-reporter" There is a issue with truffle >5.2.24 and eth-gas-report, with this parameter its works ok.
