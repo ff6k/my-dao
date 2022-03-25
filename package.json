@@ -7,8 +7,9 @@
         "test": "test"
     },
     "scripts": {
+        "test": "truffle test --reporter eth-gas-reporter",
         "coverage": "truffle run coverage",
-        "test": "truffle test --reporter eth-gas-reporter"
+        "lint": "solhint --max-warnings 0 \"contracts/**/*.sol\" -f stylish"
     },
     "keywords": [
         "ERC-20",
@@ -23,7 +24,7 @@
         "chai-as-promised": "^7.1.1",
         "chai-bn": "^0.3.1",
         "eth-gas-reporter": "^0.2.24",
-        "solidity-coverage": "^0.7.20",
+        "solidity-coverage": "^0.7.17",
         "truffle-assertions": "^0.9.2"
     }
 }
