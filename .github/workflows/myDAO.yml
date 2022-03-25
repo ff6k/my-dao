@@ -57,3 +57,9 @@ jobs:
 
     - name: Run and Check Solhint
       run: npx solhint 'contracts/**/*.sol' -f stylish
+
+  analyze:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: crytic/slither-action@v0.1.1
