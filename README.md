@@ -7,4 +7,34 @@
 [![GitHub Issues](https://img.shields.io/github/issues/ehsomma/mydao)](https://github.com/ehsomma/mydao/issues)
 [![License](https://img.shields.io/badge/license-MIT-informational)](/LICENSE)
 
-In progress...
+This project implements a basic voting DAO smart contract for research purposes to understand its inner workings. This is by no means a complete implementation. It also includes an ERC-20 contract to be used as a DAO governance token.
+
+## Technical features and used tools
+* **Truffle**
+* **Ganache-cli**
+* **Unit/Integration tests**
+* **Chai (expect)
+* **truffle-assertions** (revert assertions)
+* **openzeppelin/test-helpers** (time and block manipulation)
+* **eth-gas-reporter**
+* **solidity-coverage** (code coverage)
+* **coveralls** (code coverage report)
+* **solhint** (linter for Solidity)
+* **slither** (vulnerability analyzer)
+* **Full contract documentation** (NatSpec Format)
+* **Solidity coding conventions**
+
+## Main functions of the DAO
+* Deposit governance tokens to be able to create a proposal.
+* Create a proposal.
+* Vote a proposal (only one time an in a time period).
+* Withdraw the tokens.
+
+## Reports
+
+### Solhint
+```
+solhint 'contracts/**/*.sol' -f table
+```
+
+![Solhint](./assets/screenshots/solhint-report.png?raw=true)
