@@ -13,7 +13,7 @@ This project implements a basic voting DAO smart contract for research purposes 
 * **Truffle**
 * **Ganache-cli**
 * **Unit/Integration tests**
-* **Chai (expect)
+* **Chai** (expect)
 * **truffle-assertions** (revert assertions)
 * **openzeppelin/test-helpers** (time and block manipulation)
 * **eth-gas-reporter**
@@ -33,8 +33,31 @@ This project implements a basic voting DAO smart contract for research purposes 
 ## Reports
 
 ### Solhint
-```
+`
 solhint 'contracts/**/*.sol' -f table
-```
-
+`
 ![Solhint](./assets/screenshots/solhint-report.png?raw=true)
+
+### Tests
+`
+truffle test
+`
+![Tests](./assets/screenshots/test-report.png?raw=true)
+
+### Code coverage
+`
+truffle run coverage
+`
+![Coverage](./assets/screenshots/coverage-report.png?raw=true)
+
+### Gas
+`
+truffle test --reporter eth-gas-reporter
+`
+![Gas](./assets/screenshots/gas-report.png?raw=true)
+
+### Slither
+`
+slither --exclude-dependencies .
+`
+![Slither](./assets/screenshots/slither-report.png?raw=true)
