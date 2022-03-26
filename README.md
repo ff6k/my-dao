@@ -30,34 +30,41 @@ This project implements a basic voting DAO smart contract for research purposes 
 * Vote a proposal (only one time an in a time period).
 * Withdraw the tokens.
 
+> **NOTE:** For more information see code comments in [`MyDAO.sol`](./contracts/MyDAO.sol).
+
 ## Reports
 
 ### Solhint
 `
 solhint 'contracts/**/*.sol' -f table
 `
-![Solhint](./assets/screenshots/solhint-report.png?raw=true)
+
+<img src="./assets/screenshots/solhint-report.png?raw=true"/>
 
 ### Tests
 `
 truffle test
 `
-![Tests](./assets/screenshots/test-report.png?raw=true)
+
+<img src="./assets/screenshots/test-report.png?raw=true"/>
 
 ### Code coverage
 `
 truffle run coverage
 `
-![Coverage](./assets/screenshots/coverage-report.png?raw=true)
+
+<img src="./assets/screenshots/coverage-report.png?raw=true)"/>
 
 ### Gas
 `
 truffle test --reporter eth-gas-reporter
 `
-![Gas](./assets/screenshots/gas-report.png?raw=true)
+
+<img src="./assets/screenshots/gas-report.png?raw=true)"/>
 
 ### Slither
 `
 slither --exclude-dependencies .
 `
-![Slither](./assets/screenshots/slither-report.png?raw=true)
+
+<img src="./assets/screenshots/slither-report.png?raw=true)"/>
