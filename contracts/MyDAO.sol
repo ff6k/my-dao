@@ -1,7 +1,7 @@
 /*
 ganache-cli -m "xxxx..." --blockTime 5
 
-Option with Truffle:
+Try with Truffle:
 ===================
 truffle migrate --network development --reset
 truffle console // default: --network development
@@ -14,10 +14,10 @@ token.name();
 (await token.totalSupply()).toString();
 
 let myDao = await MyDAO.deployed();
-myDao.ping();
+...
 
-Option with Remix:
-...see OneNote documentation.
+Try with Remix:
+...Copy paste the twoo contracts in Remix or use the Remix extension for VSCode.
 */
 
 // SPDX-License-Identifier: MIT.
@@ -25,11 +25,11 @@ pragma solidity ^0.8.7;
 
 //#region Imports
 
-// NOTE (*1): Se puede importar y usar MyCoin o directamente el IERC20 y ERC20 de
-// OpenZeppelin (ya que MyCoin es ERC20) y no tiene funcionalidad extra. Lo que
-// importa es deployar la DAO con el address del token previamente deployado.
-// La configuración inicial del token esta en 2_contracts_migration.js pero se puede
-// deployar previamente de forma manual.
+// NOTE (*1): You can import and use MyCoin or OpenZeppelin's IERC20 and ERC20 
+// directly (since MyCoin is ERC20) and it has no extra functionality. What matters
+// is deploying the DAO with the address of the previously deployed token.
+// The initial configuration of the token is in 2_contracts_migration.js but it 
+// can be previously deployed manually.
 //import '../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol';*1
 import "./MyCoin.sol";
 
@@ -37,7 +37,9 @@ import "./MyCoin.sol";
 
 /// @title DAO for voting proposals. (for research porpose).
 /// @author Esteban H. Somma.
-/// @notice
+/// @notice A basic voting DAO smart contract for research purposes to understand
+/// its inner workings. This is by no means a complete implementation. It also 
+/// includes an ERC-20 contract to be used as a DAO governance token.
 contract MyDAO {
     //#region Declarations
 
