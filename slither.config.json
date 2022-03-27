@@ -1,4 +1,4 @@
 {
     "detectors_to_exclude": "block-timestamp,different-pragma-directives-are-used",
-    "filter_paths": "node_modules,Migrations.sol"
+    "filter_paths": "node_modules|Migrations.sol"
 }
