@@ -1,7 +1,7 @@
 {
     "name": "mydao",
     "version": "1.0.0",
-    "description": "MyDAO",
+    "description": "Basic voting DAO smart contract for research purposes",
     "main": "truffle-config.js",
     "directories": {
         "test": "test"
@@ -17,6 +17,11 @@
     ],
     "author": "Esteban Hugo Somma",
     "license": "MIT",
+	"repository": "github:ehsomma/mydao",
+    "bugs": {
+        "url": "https://github.com/ehsomma/mydao/issues"
+    },
+    "homepage": "https://github.com/ehsomma/mydao",
     "devDependencies": {
         "@openzeppelin/contracts": "^4.5.0",
         "@openzeppelin/test-helpers": "^0.5.15",
