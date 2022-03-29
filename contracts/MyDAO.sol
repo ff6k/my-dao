@@ -106,7 +106,8 @@ contract MyDAO {
 
     //#region Constructor
 
-    /// @dev Explain to a developer any extra details
+    /// @dev Sets the values for {tokenAddress}. tokenAddress is immutable, it can 
+    /// only be set once during construction.
     /// @param tokenAddress The address of the governance token to be used in the DAO.
     constructor(address tokenAddress) {
         token = MyCoin(tokenAddress);
