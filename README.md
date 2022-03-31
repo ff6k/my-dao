@@ -10,6 +10,7 @@
 This project implements a basic voting DAO smart contract for research purposes to understand its inner workings. This is by no means a complete implementation. It also includes an ERC-20 contract to be used as a DAO governance token.
 
 ## Technical features and used tools
+* **Solidity**
 * **Truffle**
 * **Ganache-cli**
 * **Unit/Integration tests**
