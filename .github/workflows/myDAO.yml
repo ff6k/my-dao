@@ -26,8 +26,10 @@ jobs:
       run: npm --version
     
     - name: Install Truffle (globaly)
-      #run: npm install truffle@5.4.24 -g
-      run: npm install -g truffle
+      run: npm install truffle@5.4.24 -g
+      #FIX: solidity-coverage not work with truffle >5.4.24.
+      #https://github.com/sc-forks/solidity-coverage/issues/696
+      #run: npm install -g truffle
 
     - name: Install Solhint (globaly)
       run: npm install -g solhint
